@@ -1,5 +1,66 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f0f0f0;
+  color: #333;
+  margin: 0;
+  padding: 20px;
+}
+select {
+  display: block;
+  width: 100%;
+  font-size: 18px;
+  border-radius: 4px;
+  padding: 10px;
+}
+.container {
+  max-width: 600px;
+  margin: 20px auto;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  box-sizing: border-box;
+}
+.city {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+  padding: 14px 0;
+  margin: 10px 0;
+}
+.city:last-child {
+  border-bottom: none;
+}
+.city-info {
+  flex-grow: 1;
+}
+h2 {
+  font-size: 24px;
+  margin: 0;
+  color: #007bff;
+}
+p {
+  font-size: 14px;
+  color: #777;
+  margin: 5px 0;
+}
+
 h1 {
   text-align: center;
+}
+.date,
+.time {
+  font-size: 18px;
+  margin: 5px 0;
+  color: #333;
+}
+.time-container {
+  text-align: center;
+}
+.time {
+  font-weight: bold;
+  font-size: 32px;
 }
 footer {
   text-align: center;
