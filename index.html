@@ -5,44 +5,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>World-Clock-Project</title>
     <link rel="stylesheet" href="src/style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.30.1/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.45/moment-timezone-with-data-1970-2030.min.js"></script>
   </head>
   <body>
     <div class="container">
       <h1>World Clock</h1>
       <select>
         <option value="">Select a city</option>
-        <option value="">New York</option>
-        <option value="">London</option>
-        <option value="">Tokyo</option>
+        <option value="France/Paris">Paris</option>
+        <option value="England/London">London</option>
+        <option value="Japan/Tokyo">Tokyo</option>
       </select>
-      <div class="city">
+      <div class="city" id="paris">
         <div class="city-info">
-          <h2>New York</h2>
-          <p>USA</p>
+          <h2>Paris</h2>
+          <p>France</p>
         </div>
         <div class="time-container">
-          <div class="date">August 15th 2022</div>
-          <div class="time">1:48:15 AM</div>
+          <div class="date" id="paris-date">August 15th 2022</div>
+          <div class="time" id="paris-time">1:48:15 AM</div>
         </div>
       </div>
-      <div class="city">
+      <div class="city" id="london">
         <div class="city-info">
           <h2>London</h2>
           <p>England</p>
         </div>
         <div class="time-container">
-          <div class="date">August 15th 2022</div>
-          <div class="time">1:48:15 AM</div>
+          <div class="date" id="london-date">August 15th 2022</div>
+          <div class="time" id="london-time">1:48:15 AM</div>
         </div>
       </div>
-      <div class="city">
+      <div class="city" id="tokyo">
         <div class="city-info">
           <h2>Tokyo</h2>
           <p>Japan</p>
         </div>
         <div class="time-container">
-          <div class="date">August 15th 2022</div>
-          <div class="time">1:48:15 AM</div>
+          <div class="date" id="tokyo-date">August 15th 2022</div>
+          <div class="time" id="tokyo-time">1:48:15 AM</div>
         </div>
       </div>
     </div>
