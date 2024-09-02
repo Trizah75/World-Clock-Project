@@ -39,9 +39,9 @@ function updateCity(event) {
     cityName = "Tokyo";
     cityCountry = "Japan";
   } else if (cityTimeZone === "current") {
-    moment.tz.guess();
-    cityName = "Your Current Location";
-    cityCountry = "";
+    cityTimeZone = moment.tz.guess();
+    cityName = cityTimeZone.replace("_", " ").split("/")[1];
+    cityCountry = cityTimeZone.replace("_", " ").split("/")[0];
   }
 
   let cityTime = moment().tz(cityTimeZone);
