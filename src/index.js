@@ -25,3 +25,36 @@ function updateTime() {
 }
 updateTime();
 setInterval(updateTime, 1000);
+
+function updateCity(event) {
+  let cityTimeZone = event.target.value;
+  let cityName, cityCountry;
+  if (cityTimeZone === "Europe/Paris") {
+    cityName = "Paris";
+    cityCountry = "France";
+  } else if (cityTimeZone === "Europe/London") {
+    cityName = "London";
+    cityCountry = "England";
+  } else if (cityTimeZone === "Asia/Tokyo") {
+    cityName = "Tokyo";
+    cityCountry = "Japan";
+  } else if (cityTimeZone === "current") {
+    moment.tz.guess();
+    cityName = "Your Current Location";
+    cityCountry = "";
+  }
+
+  let cityTime = moment().tz(cityTimeZone);
+  let citiesElement = document.querySelector("#cities");
+  citiesElement.innerHTML = `
+  <div class="city">
+          <div class="city-info">
+            <h2>${cityName}</h2>
+            <p>${cityCountry}</p>
+          </div>
+          <div class="time-container">
+            <div class="date">${cityTime.format("MMMM Do YYYY")}</div>
+            <div class="time">${cityTime.format("h:mm:ss")}</div>`;
+}
+let citiesSelectElement = document.querySelector("#city");
+citiesSelectElement.addEventListener("change", updateCity);
